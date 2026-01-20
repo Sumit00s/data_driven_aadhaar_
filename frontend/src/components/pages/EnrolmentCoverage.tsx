@@ -43,7 +43,7 @@ export function EnrolmentCoverage({ filters }: EnrolmentCoverageProps) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/metrics/enrolment/child-delay')
+    fetch('https://data-driven-aadhaar.onrender.com/metrics/enrolment/child-delay')
       .then(res => res.json())
       .then(data => {
         setChildDelayData(data);

@@ -45,7 +45,7 @@ export function AlertsPriority({ filters }: AlertsPriorityProps) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/alerts/priority')
+    fetch('https://data-driven-aadhaar.onrender.com/alerts/priority')
       .then(res => res.json())
       .then(data => {
         setAlerts(data);
@@ -122,10 +122,10 @@ export function AlertsPriority({ filters }: AlertsPriorityProps) {
                   <td className="py-3 px-4">
                     <span
                       className={`text-xs px-2.5 py-1 rounded font-medium ${alert.severity === 'Critical'
-                          ? 'bg-red-100 text-red-800'
-                          : alert.severity === 'High'
-                            ? 'bg-orange-100 text-orange-800'
-                            : 'bg-yellow-100 text-yellow-800'
+                        ? 'bg-red-100 text-red-800'
+                        : alert.severity === 'High'
+                          ? 'bg-orange-100 text-orange-800'
+                          : 'bg-yellow-100 text-yellow-800'
                         }`}
                     >
                       {alert.severity}

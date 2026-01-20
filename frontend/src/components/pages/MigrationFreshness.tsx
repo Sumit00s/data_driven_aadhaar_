@@ -29,7 +29,7 @@ export function MigrationFreshness({ filters }: MigrationFreshnessProps) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/metrics/migration/mismatch')
+    fetch('https://data-driven-aadhaar.onrender.com/metrics/migration/mismatch')
       .then(res => res.json())
       .then(data => {
         setMigrationData(data);

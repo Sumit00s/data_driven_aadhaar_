@@ -31,7 +31,7 @@ export function UpdatesBiometric({ filters }: UpdatesBiometricProps) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/metrics/biometric/update-neglect')
+    fetch('https://data-driven-aadhaar.onrender.com/metrics/biometric/update-neglect')
       .then(res => res.json())
       .then(data => {
         setUpdateNeglectData(data);
